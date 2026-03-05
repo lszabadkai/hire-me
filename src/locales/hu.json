@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "Hire Me!",
+    "subtitle": "Te vagy a GoTo új felvételi igazgatója!",
+    "tagline": "Nézd át az önéletrajzokat, szűrd ki a problémásakat, és hozd meg a legjobb döntést — mielőtt lejár az idő!"
+  },
+  "start": {
+    "button": "Játék indítása",
+    "how_to_play": "Hogyan kell játszani?",
+    "instructions_title": "Játékszabályok",
+    "instructions": [
+      "Olvasd el a bal oldali álláshirdetést.",
+      "Nézd át a beérkező önéletrajzot.",
+      "Döntsd el: FELVESZ ✅ vagy ELUTASÍT ❌",
+      "Minél pontosabb és gyorsabb vagy, annál több pontot kapsz!",
+      "Keresd a piros zászlókat — gyanús adatokra kattintva bónuszpontokat szerezhetsz."
+    ]
+  },
+  "job": {
+    "panel_title": "Nyitott pozíció",
+    "role_summary": "Szerepkör rövid leírása",
+    "responsibilities": "Főbb feladatok",
+    "required": "Követelmények",
+    "bonus": "Bónusz (extra pont)",
+    "disqualifiers": "Kizáró okok"
+  },
+  "cv": {
+    "file_label": "Jelölti dosszié",
+    "profile": "Gyors profil",
+    "highlights": "Kiemelt pontok",
+    "education": "Végzettség",
+    "experience": "Tapasztalat",
+    "skills": "Készségek",
+    "languages": "Nyelvek",
+    "fun_fact": "Érdekesség",
+    "years": "év",
+    "team_size": "csapatméret",
+    "open_source": "Open source közreműködő",
+    "mentoring": "Mentorálási tapasztalat"
+  },
+  "decision": {
+    "hire": "FELVESZ ✅",
+    "reject": "ELUTASÍT ❌",
+    "correct": "Helyes döntés! 🎉",
+    "wrong": "Téves döntés! 😬",
+    "red_flag_found": "Piros zászlót találtál! +5 pont 🚩",
+    "speed_bonus": "Gyors döntés! +3 pont ⚡",
+    "tap_to_continue": "Kattints a folytatáshoz"
+  },
+  "interview": {
+    "title": "Gyors interjú kérdés",
+    "subtitle": "Értékeld a jelölt válaszát:",
+    "good_answer": "Jó válasz! ✅",
+    "bad_answer": "Figyelmeztető jel! ❌"
+  },
+  "bias": {
+    "title": "Üzenet az igazgatótól 📩",
+    "ceo_message": "\"Szia! Csak köztünk — a [Zrínyi Egyetem] végzettjeit automatikusan utasítsuk el. Soha nem jönnek be nálunk. Köszönöm! 😉\"",
+    "follow": "🚫 Követem az utasítást",
+    "refuse": "✊ Visszautasítom — jelzem a HR-nek",
+    "follow_result": "Követted az elfogult utasítást. −15 pont",
+    "refuse_result": "Kiálltál az etikáért! +20 pont 🌟"
+  },
+  "hud": {
+    "score": "Pontszám",
+    "level": "Szint",
+    "cvs_remaining": "Önéletrajz",
+    "time": "Idő"
+  },
+  "level_end": {
+    "title": "Szint vége!",
+    "correct": "Helyes döntések",
+    "wrong": "Téves döntések",
+    "next_level": "Következő szint",
+    "finish": "Befejezés"
+  },
+  "game_over": {
+    "title": "Játék vége!",
+    "final_score": "Végső pontszám",
+    "rating": "Értékelés",
+    "bias_followed": "Követted az elfogult utasítást: −15 pont",
+    "bias_refused": "Visszautasítottad az elfogultságot: +20 pont 🌟",
+    "play_again": "Újra játszom",
+    "ratings": {
+      "intern": "Gyakorló",
+      "recruiter": "Toborzó",
+      "hiring_manager": "Felvételi vezető",
+      "vp": "Mérnöki igazgató",
+      "cpo": "Chief People Officer"
+    }
+  },
+  "lang_toggle": "EN"
+}

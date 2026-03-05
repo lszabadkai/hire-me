@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "Hire Me!",
+    "subtitle": "You are GoTo's new Engineering Hiring Manager!",
+    "tagline": "Review CVs, spot red flags, check requirements, and make the right calls — before time runs out!"
+  },
+  "start": {
+    "button": "Start Game",
+    "how_to_play": "How to play?",
+    "instructions_title": "How to Play",
+    "instructions": [
+      "Read the job description on the left.",
+      "Review the incoming CV.",
+      "Decide: HIRE ✅ or REJECT ❌",
+      "The more accurate and faster you are, the more points you earn!",
+      "Look for red flags — click suspicious fields for bonus points."
+    ]
+  },
+  "job": {
+    "panel_title": "Open Position",
+    "role_summary": "Role Summary",
+    "responsibilities": "Key Responsibilities",
+    "required": "Requirements",
+    "bonus": "Bonus (extra points)",
+    "disqualifiers": "Disqualifiers"
+  },
+  "cv": {
+    "file_label": "Candidate File",
+    "profile": "Profile Snapshot",
+    "highlights": "Highlights",
+    "education": "Education",
+    "experience": "Experience",
+    "skills": "Skills",
+    "languages": "Languages",
+    "fun_fact": "Fun Fact",
+    "years": "yrs",
+    "team_size": "team size",
+    "open_source": "Open source contributor",
+    "mentoring": "Mentoring experience"
+  },
+  "decision": {
+    "hire": "HIRE ✅",
+    "reject": "REJECT ❌",
+    "correct": "Correct decision! 🎉",
+    "wrong": "Wrong decision! 😬",
+    "red_flag_found": "Red flag spotted! +5 pts 🚩",
+    "speed_bonus": "Quick decision! +3 pts ⚡",
+    "tap_to_continue": "Click to continue"
+  },
+  "interview": {
+    "title": "Quick Interview Question",
+    "subtitle": "Evaluate the candidate's answer:",
+    "good_answer": "Good answer! ✅",
+    "bad_answer": "Red flag! ❌"
+  },
+  "bias": {
+    "title": "Message from the CEO 📩",
+    "ceo_message": "\"Hey, between us — let's auto-reject anyone from [Zrínyi University]. They never work out. Thanks! 😉\"",
+    "follow": "🚫 Follow the instruction",
+    "refuse": "✊ Refuse & Report to HR",
+    "follow_result": "You followed the biased instruction. −15 pts",
+    "refuse_result": "You stood up for ethics! +20 pts 🌟"
+  },
+  "hud": {
+    "score": "Score",
+    "level": "Level",
+    "cvs_remaining": "CVs",
+    "time": "Time"
+  },
+  "level_end": {
+    "title": "Level Complete!",
+    "correct": "Correct decisions",
+    "wrong": "Wrong decisions",
+    "next_level": "Next Level",
+    "finish": "Finish"
+  },
+  "game_over": {
+    "title": "Game Over!",
+    "final_score": "Final Score",
+    "rating": "Your Rating",
+    "bias_followed": "You followed the biased instruction: −15 pts",
+    "bias_refused": "You refused bias: +20 pts 🌟",
+    "play_again": "Play Again",
+    "ratings": {
+      "intern": "Intern",
+      "recruiter": "Recruiter",
+      "hiring_manager": "Hiring Manager",
+      "vp": "VP of Engineering",
+      "cpo": "Chief People Officer"
+    }
+  },
+  "lang_toggle": "HU"
+}

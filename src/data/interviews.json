@@ -1,0 +1,87 @@
+[
+  {
+    "id": "q1",
+    "question": "Tell me about a time you disagreed with a teammate.",
+    "questionHu": "Mesélj egy időszakról, amikor nem értettél egyet egy csapattársaddal.",
+    "answers": [
+      {
+        "text": "I listened to their perspective, shared mine, and we found a compromise together.",
+        "textHu": "Meghallgattam a szempontjaikat, elmondtam az enyéimet, és közösen találtunk megoldást.",
+        "isGoodAnswer": true
+      },
+      {
+        "text": "I was right, so I just did it my way and told them after.",
+        "textHu": "Nekem volt igazam, szóval csak csináltam úgy ahogy akartam, és utólag szóltam.",
+        "isGoodAnswer": false
+      }
+    ]
+  },
+  {
+    "id": "q2",
+    "question": "How do you handle a deadline you can't meet?",
+    "questionHu": "Mit csinálsz, ha nem tudod teljesíteni a határidőt?",
+    "answers": [
+      {
+        "text": "I communicate early, explain the situation, and propose a new realistic timeline.",
+        "textHu": "Korán jelzem, elmagyarázom a helyzetet, és javaslok egy reális új határidőt.",
+        "isGoodAnswer": true
+      },
+      {
+        "text": "I say nothing and hope no one notices.",
+        "textHu": "Nem szólok semmit és remélem, hogy senki nem veszi észre.",
+        "isGoodAnswer": false
+      }
+    ]
+  },
+  {
+    "id": "q3",
+    "question": "How do you keep up with new technologies?",
+    "questionHu": "Hogyan tartod magad naprakészen az új technológiákkal?",
+    "answers": [
+      {
+        "text": "I read blogs, do side projects, and share learnings with my team.",
+        "textHu": "Blogokat olvasok, saját projekteken dolgozom, és megosztom a tapasztalataimat a csapattal.",
+        "isGoodAnswer": true
+      },
+      {
+        "text": "I don't. The tech I know is good enough forever.",
+        "textHu": "Nem foglalkozom vele. A tudásom így is elég lesz örökre.",
+        "isGoodAnswer": false
+      }
+    ]
+  },
+  {
+    "id": "q4",
+    "question": "Describe your ideal team environment.",
+    "questionHu": "Írj le egy ideális csapatkörnyezetet!",
+    "answers": [
+      {
+        "text": "Collaborative, with open feedback, shared ownership, and psychological safety.",
+        "textHu": "Együttműködő, nyílt visszajelzéssel, megosztott felelősséggel és pszichológiai biztonsággal.",
+        "isGoodAnswer": true
+      },
+      {
+        "text": "One where I work alone so no one slows me down.",
+        "textHu": "Ahol egyedül dolgozom, hogy senki ne lassítson.",
+        "isGoodAnswer": false
+      }
+    ]
+  },
+  {
+    "id": "q5",
+    "question": "What do you do when you receive critical feedback on your work?",
+    "questionHu": "Mit csinálsz, ha kritikus visszajelzést kapsz a munkádra?",
+    "answers": [
+      {
+        "text": "I thank the person, reflect on it, and figure out how to improve.",
+        "textHu": "Megköszönöm, átgondolom, és megnézem, hogyan tudok fejlődni.",
+        "isGoodAnswer": true
+      },
+      {
+        "text": "I argue back — if they criticise me, they clearly don't understand my vision.",
+        "textHu": "Visszavitatkozom — ha kritizálnak, biztosan nem értik az elképzelésemet.",
+        "isGoodAnswer": false
+      }
+    ]
+  }
+]

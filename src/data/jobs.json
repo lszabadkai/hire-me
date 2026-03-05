@@ -1,0 +1,114 @@
+[
+  {
+    "level": 1,
+    "title": "Junior Frontend Developer",
+    "titleHu": "Junior Frontend Fejlesztő",
+    "roleSummary": "Build and maintain UI features in a product team while learning modern frontend practices.",
+    "roleSummaryHu": "UI funkciok fejlesztese es karbantartasa termekcsapatban, modern frontend gyakorlatok mellett.",
+    "responsibilities": [
+      "Implement responsive screens from existing design specs.",
+      "Fix UI bugs and improve usability with guidance from seniors.",
+      "Write clean, testable JavaScript code and participate in code reviews."
+    ],
+    "responsibilitiesHu": [
+      "Reszponziv kepernyok implementalasa meglevo design specifikacio alapjan.",
+      "UI hibak javitasa es hasznalhatosag fejlesztese senior tamogatassal.",
+      "Attekintheto, tesztelheto JavaScript kod irasa es code review reszvetel."
+    ],
+    "requiredSkills": ["JavaScript"],
+    "minExperienceYears": 1,
+    "requiredLanguages": ["English"],
+    "bonusCriteria": [],
+    "disqualifiers": []
+  },
+  {
+    "level": 2,
+    "title": "Mid Frontend Developer",
+    "titleHu": "Mid-level Frontend Fejlesztő",
+    "roleSummary": "Own feature delivery end-to-end in a React codebase and collaborate closely with product and design.",
+    "roleSummaryHu": "Onallo feature szallitas React kodbazisban, szoros egyuttmukodesben termek es design csapattal.",
+    "responsibilities": [
+      "Design component structure and state flows for medium-complexity features.",
+      "Improve performance, accessibility and reliability of existing UI flows.",
+      "Mentor juniors through pairing and thoughtful pull request feedback."
+    ],
+    "responsibilitiesHu": [
+      "Komponens strukturak es state flow-k tervezese kozepes komplexitasu funkciokhoz.",
+      "Meglevo UI folyamatok teljesitmenyenek, akadalymentessegenek es megbizhatosaganak javitasa.",
+      "Junior fejlesztok tamogatasa paros programozassal es ertelmes PR visszajelzessel."
+    ],
+    "requiredSkills": ["JavaScript", "React"],
+    "minExperienceYears": 2,
+    "requiredLanguages": ["English"],
+    "bonusCriteria": ["isOpenSource"],
+    "disqualifiers": []
+  },
+  {
+    "level": 3,
+    "title": "Senior Backend Engineer",
+    "titleHu": "Senior Backend Mérnök",
+    "roleSummary": "Lead backend architecture decisions for scalable services that support product-critical APIs.",
+    "roleSummaryHu": "Skalazhato backend szolgaltatasok architekturajanak vezetese, uzletileg kritikus API-k tamogatasara.",
+    "responsibilities": [
+      "Build and operate robust services in Python or Go.",
+      "Drive API and data model design for high-throughput workloads.",
+      "Guide teams on observability, incident handling and engineering standards."
+    ],
+    "responsibilitiesHu": [
+      "Stabil szolgaltatasok fejlesztese es uzemeltetese Python vagy Go technologiaval.",
+      "API- es adatmodell-tervezes nagy terhelesu rendszerekhez.",
+      "Csapatok tamogatasa monitorozasban, incidenskezelesben es engineering standardokban."
+    ],
+    "requiredSkills": ["Python|Go"],
+    "minExperienceYears": 3,
+    "requiredLanguages": ["English"],
+    "minTeamSize": 5,
+    "bonusCriteria": ["isOpenSource", "hasMentoringExperience"],
+    "disqualifiers": ["claims_all_languages", "impossible_dates", "fake_credentials"]
+  },
+  {
+    "level": 4,
+    "title": "Data Analyst",
+    "titleHu": "Adatelemző",
+    "roleSummary": "Translate business questions into reliable analyses and dashboards that drive product decisions.",
+    "roleSummaryHu": "Uzleti kerdesek atalakitasa megbizhato elemzesekke es dashboardokka a termekdontesek tamogatasara.",
+    "responsibilities": [
+      "Analyze product funnels and user behavior with Python and SQL.",
+      "Create clear dashboards and communicate insights to non-technical partners.",
+      "Maintain data quality checks and document analysis assumptions."
+    ],
+    "responsibilitiesHu": [
+      "Termekfunnel es felhasznaloi viselkedes elemzese Python es SQL segitsegevel.",
+      "Egyertelmu dashboardok keszitese es insightok kommunikacioja nem technikai partnereknek.",
+      "Adatminosegi ellenorzesek fenntartasa es elemzesi feltetelezesek dokumentalasa."
+    ],
+    "requiredSkills": ["Python", "SQL"],
+    "minExperienceYears": 2,
+    "requiredLanguages": ["English"],
+    "bonusCriteria": ["hasMentoringExperience"],
+    "disqualifiers": ["buzzword_overload"]
+  },
+  {
+    "level": 5,
+    "title": "Product Manager",
+    "titleHu": "Termékmenedzser",
+    "roleSummary": "Shape product direction, align engineering and business priorities, and deliver measurable customer impact.",
+    "roleSummaryHu": "Termekirany meghatarozasa, engineering es uzleti prioritasok osszehangolasa, merheto ugyfelhatas szallitasa.",
+    "responsibilities": [
+      "Own roadmap prioritization and communicate trade-offs clearly.",
+      "Run discovery with users and convert insights into actionable backlog items.",
+      "Coordinate cross-functional execution across engineering, design and stakeholders."
+    ],
+    "responsibilitiesHu": [
+      "Roadmap priorizalas tulajdonlasa es trade-offok egyertelmu kommunikacioja.",
+      "Felhasznaloi discovery folyamat vezetese es insightok backlogge alakitasa.",
+      "Keresztfunkcionalis vegrehajtas koordinacioja engineering, design es stakeholder oldalrol."
+    ],
+    "requiredSkills": ["Communication", "Agile"],
+    "minExperienceYears": 3,
+    "requiredLanguages": ["English", "Hungarian"],
+    "minTeamSize": 4,
+    "bonusCriteria": ["hasMentoringExperience", "isOpenSource"],
+    "disqualifiers": ["no_relevant_experience", "fake_credentials"]
+  }
+]
