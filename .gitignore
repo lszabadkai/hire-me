@@ -1,9 +1,35 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
-coverage/
-playwright-report/
-test-results/
-.playwright-mcp/
-.vscode/
 *.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Editor / IDE
+.vscode/*
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Test results
+test-results/
+playwright-report/
+coverage/
+.playwright-mcp/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vite
+vite.config.ts.timestamp-*
