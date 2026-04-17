@@ -1,9 +1,14 @@
-import type { Candidate, JobDescription, RedFlag } from '@/types/game'
+import type {
+  Candidate,
+  JobDescription,
+  RedFlag,
+  ValidationReason,
+} from "@/types/game";
 
 export interface ValidationResult {
-  shouldHire: boolean
-  reasons: string[]
-  redFlagsDetected: RedFlag[]
+  shouldHire: boolean;
+  reasons: ValidationReason[];
+  redFlagsDetected: RedFlag[];
 }
 
 /**
@@ -12,62 +17,71 @@ export interface ValidationResult {
  */
 export function validateCV(
   candidate: Candidate,
-  job: JobDescription
+  job: JobDescription,
 ): ValidationResult {
-  const reasons: string[] = []
-  const redFlagsDetected: RedFlag[] = candidate.redFlags ?? []
+  const reasons: ValidationReason[] = [];
+  const redFlagsDetected: RedFlag[] = candidate.redFlags ?? [];
 
   // ── 1. Disqualifiers (red flags) ──────────────────────────────────────────
   if (job.disqualifiers && job.disqualifiers.length > 0) {
-    const triggered = redFlagsDetected.filter(flag =>
-      job.disqualifiers!.includes(flag)
-    )
+    const triggered = redFlagsDetected.filter((flag) =>
+      job.disqualifiers!.includes(flag),
+    );
     if (triggered.length > 0) {
-      triggered.forEach(f => reasons.push(`Disqualifier: ${f}`))
-      return { shouldHire: false, reasons, redFlagsDetected }
+      triggered.forEach((f) =>
+        reasons.push({ key: "disqualifier", params: { flag: f } }),
+      );
+      return { shouldHire: false, reasons, redFlagsDetected };
     }
   }
 
   // ── 2. Required skills ──────────────────────────────────────────────────────
-  // AND logic across array entries; "|" within an entry means OR (e.g. "Python|Go")
-  const skillsLower = candidate.skills.map(s => s.toLowerCase())
-  const requiredSkillsLower = job.requiredSkills.map(s => s.toLowerCase())
-  const missingSkills = requiredSkillsLower.filter(req => {
-    const options = req.split('|').map(o => o.trim())
-    return !options.some(opt => skillsLower.includes(opt))
-  })
-  const hasRequiredSkill = missingSkills.length === 0
+  const skillsLower = candidate.skills.map((s) => s.toLowerCase());
+  const requiredSkillsLower = job.requiredSkills.map((s) => s.toLowerCase());
+  const missingSkills = requiredSkillsLower.filter((req) => {
+    const options = req.split("|").map((o) => o.trim());
+    return !options.some((opt) => skillsLower.includes(opt));
+  });
+  const hasRequiredSkill = missingSkills.length === 0;
 
   if (!hasRequiredSkill) {
-    const display = missingSkills.map(s => s.replace(/\|/g, '/')).join(', ')
-    reasons.push(`Missing required skill(s): ${display}`)
+    const display = missingSkills.map((s) => s.replace(/\|/g, "/")).join(", ");
+    reasons.push({ key: "missing_skill", params: { skills: display } });
   }
 
   // ── 3. Experience years ───────────────────────────────────────────────────
-  const hasExperience = candidate.experienceYears >= job.minExperienceYears
+  const hasExperience = candidate.experienceYears >= job.minExperienceYears;
   if (!hasExperience) {
-    reasons.push(
-      `Insufficient experience: ${candidate.experienceYears}yr < ${job.minExperienceYears}yr required`
-    )
+    reasons.push({
+      key: "insufficient_experience",
+      params: {
+        actual: candidate.experienceYears,
+        required: job.minExperienceYears,
+      },
+    });
   }
 
   // ── 4. Required languages ─────────────────────────────────────────────────
-  const langsLower = candidate.languages.map(l => l.toLowerCase())
+  const langsLower = candidate.languages.map((l) => l.toLowerCase());
   const missingLangs = job.requiredLanguages
-    .map(l => l.toLowerCase())
-    .filter(req => !langsLower.includes(req))
+    .map((l) => l.toLowerCase())
+    .filter((req) => !langsLower.includes(req));
 
   if (missingLangs.length > 0) {
-    reasons.push(`Missing languages: ${missingLangs.join(', ')}`)
+    reasons.push({
+      key: "missing_language",
+      params: { languages: missingLangs.join(", ") },
+    });
   }
 
   // ── 5. Minimum team size ──────────────────────────────────────────────────
   if (job.minTeamSize != null) {
-    const teamSize = candidate.teamSize ?? 0
+    const teamSize = candidate.teamSize ?? 0;
     if (teamSize < job.minTeamSize) {
-      reasons.push(
-        `team experience too small: ${teamSize} < ${job.minTeamSize} required`
-      )
+      reasons.push({
+        key: "team_size_too_small",
+        params: { actual: teamSize, required: job.minTeamSize },
+      });
     }
   }
 
@@ -75,7 +89,11 @@ export function validateCV(
     hasRequiredSkill &&
     hasExperience &&
     missingLangs.length === 0 &&
-    (job.minTeamSize == null || (candidate.teamSize ?? 0) >= job.minTeamSize)
+    (job.minTeamSize == null || (candidate.teamSize ?? 0) >= job.minTeamSize);
 
-  return { shouldHire, reasons, redFlagsDetected }
+  if (shouldHire) {
+    reasons.push({ key: "qualified" });
+  }
+
+  return { shouldHire, reasons, redFlagsDetected };
 }

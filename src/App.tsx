@@ -12,6 +12,7 @@ import { InterviewPopup } from '@/components/InterviewPopup'
 import { BiasAlert } from '@/components/BiasAlert'
 import { LevelEndScreen } from '@/components/LevelEndScreen'
 import { GameOverScreen } from '@/components/GameOverScreen'
+import { CVFeedbackScreen } from '@/components/CVFeedbackScreen'
 import { TOTAL_LEVELS } from '@/utils/levelProgression'
 import { AudioManager } from '@/utils/audioManager'
 import { validateCV } from '@/utils/cvValidator'
@@ -22,13 +23,10 @@ import '@/i18n'
 export default function App() {
   const { i18n } = useTranslation()
   const { state, startGame, makeDecision, spotRedFlag, answerInterview,
-    biasDecision, nextCV, nextLevel, toggleLanguage } = useGameState()
+    biasDecision, continueFromFeedback, nextLevel, toggleLanguage } = useGameState()
 
   // per-CV stopwatch
   const cvStartTimeRef = useRef<number>(Date.now())
-
-  // feedback state (shown between decision and next CV)
-  const [feedbackMsg, setFeedbackMsg] = useState<string | null>(null)
 
   // mute toggle UI state
   const [muted, setMuted] = useState(false)
@@ -52,7 +50,6 @@ export default function App() {
 
   const handleDecision = (decision: 'hire' | 'reject') => {
     const elapsed = Date.now() - cvStartTimeRef.current
-    makeDecision(decision, elapsed)
 
     // Play sound based on correctness
     if (state.currentCV && state.currentJob) {
@@ -63,12 +60,7 @@ export default function App() {
       if (!isCorrect) setTimeout(() => AudioManager.wrongDecision(), 200)
     }
 
-    // Show brief feedback then advance to next CV
-    setFeedbackMsg(null)
-    setTimeout(() => {
-      nextCV()
-      AudioManager.paperShuffle()
-    }, 900)
+    makeDecision(decision, elapsed)
   }
 
   const handleSpotRedFlag = (field: keyof Candidate) => {
@@ -122,6 +114,19 @@ export default function App() {
     )
   }
 
+  // ── CV Feedback ──────────────────────────────────────────────────────────
+  if (state.phase === 'cv_feedback' && state.lastDecisionFeedback) {
+    return (
+      <CVFeedbackScreen
+        feedback={state.lastDecisionFeedback}
+        onContinue={() => {
+          AudioManager.paperShuffle()
+          continueFromFeedback()
+        }}
+      />
+    )
+  }
+
   // ── Bias Dilemma ─────────────────────────────────────────────────────────
   if (state.phase === 'bias_dilemma') {
     return (
@@ -145,7 +150,6 @@ export default function App() {
         level={state.currentLevel}
         totalLevels={TOTAL_LEVELS}
         cvsRemaining={state.cvQueue.length + (state.currentCV ? 1 : 0)}
-        timeRemaining={state.levelTimeRemaining}
         muted={muted}
         language={state.language}
         onToggleMute={() => { AudioManager.toggle(); setMuted(AudioManager.muted) }}
@@ -178,13 +182,6 @@ export default function App() {
             )}
           </AnimatePresence>
 
-          {/* Feedback */}
-          {feedbackMsg && (
-            <div className="text-center text-sm font-medium text-gray-600 animate-pulse">
-              {feedbackMsg}
-            </div>
-          )}
-
           {/* Decision buttons */}
           <DecisionButtons
             onHire={() => handleDecision('hire')}
@@ -201,7 +198,6 @@ export default function App() {
           language={state.language}
           onAnswer={(correct: boolean) => {
             answerInterview(correct)
-            setTimeout(() => nextCV(), 600)
           }}
         />
       )}

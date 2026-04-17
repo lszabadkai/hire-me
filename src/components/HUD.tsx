@@ -6,22 +6,14 @@ interface HUDProps {
   level: number
   totalLevels: number
   cvsRemaining: number
-  timeRemaining: number
   muted: boolean
   language: string
   onToggleMute: () => void
   onToggleLanguage: () => void
 }
 
-function formatTime(seconds: number): string {
-  const m = Math.floor(seconds / 60)
-  const s = seconds % 60
-  return `${m}:${String(s).padStart(2, '0')}`
-}
-
-export const HUD: FC<HUDProps> = ({ score, level, totalLevels, cvsRemaining, timeRemaining, muted, language, onToggleMute, onToggleLanguage }) => {
+export const HUD: FC<HUDProps> = ({ score, level, totalLevels, cvsRemaining, muted, language, onToggleMute, onToggleLanguage }) => {
   const { t } = useTranslation()
-  const isUrgent = timeRemaining <= 15
 
   return (
     <div className="flex items-center w-full px-2 py-1 bg-white/80 backdrop-blur rounded-xl shadow-sm text-sm font-semibold gap-3">
@@ -33,13 +25,6 @@ export const HUD: FC<HUDProps> = ({ score, level, totalLevels, cvsRemaining, tim
       </span>
       <span className="text-gray-600">
         {t('hud.cvs_remaining')}: <span className="text-gray-900">{cvsRemaining}</span>
-      </span>
-      <span
-        className={`font-mono ${
-          isUrgent ? 'text-red-600 animate-pulse' : 'text-gray-900'
-        }`}
-      >
-        ⏱ {formatTime(timeRemaining)}
       </span>
       <span className="ml-auto flex gap-2">
         <button

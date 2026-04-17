@@ -2,7 +2,7 @@
   "app": {
     "title": "Hire Me!",
     "subtitle": "Te vagy a GoTo új felvételi igazgatója!",
-    "tagline": "Nézd át az önéletrajzokat, szűrd ki a problémásakat, és hozd meg a legjobb döntést — mielőtt lejár az idő!"
+    "tagline": "Nézd át az önéletrajzokat, szűrd ki a problémásakat, és hozd meg a legjobb döntést!"
   },
   "start": {
     "button": "Játék indítása",
@@ -12,7 +12,7 @@
       "Olvasd el a bal oldali álláshirdetést.",
       "Nézd át a beérkező önéletrajzot.",
       "Döntsd el: FELVESZ ✅ vagy ELUTASÍT ❌",
-      "Minél pontosabb és gyorsabb vagy, annál több pontot kapsz!",
+      "Minden döntés után megmutatjuk, hogy helyes volt-e — és miért.",
       "Keresd a piros zászlókat — gyanús adatokra kattintva bónuszpontokat szerezhetsz."
     ]
   },
@@ -44,8 +44,24 @@
     "correct": "Helyes döntés! 🎉",
     "wrong": "Téves döntés! 😬",
     "red_flag_found": "Piros zászlót találtál! +5 pont 🚩",
-    "speed_bonus": "Gyors döntés! +3 pont ⚡",
     "tap_to_continue": "Kattints a folytatáshoz"
+  },
+  "feedback": {
+    "correct_title": "Helyes! 🎉",
+    "wrong_title": "Téves! 😬",
+    "you_chose": "Te választottad",
+    "correct_was": "Helyes válasz",
+    "points_awarded": "Pontok",
+    "continue": "Tovább",
+    "evaluation": "Kiértékelés",
+    "reason": {
+      "disqualifier": "Kizáró piros zászló: {{flag}}",
+      "missing_skill": "Hiányzó szükséges készség(ek): {{skills}}",
+      "insufficient_experience": "Elégtelen tapasztalat: {{actual}} év < {{required}} év szükséges",
+      "missing_language": "Hiányzó nyelv(ek): {{languages}}",
+      "team_size_too_small": "Csapattapasztalat túl kicsi: {{actual}} < {{required}} szükséges",
+      "qualified": "A jelölt megfelel az összes követelménynek"
+    }
   },
   "interview": {
     "title": "Gyors interjú kérdés",
@@ -64,8 +80,7 @@
   "hud": {
     "score": "Pontszám",
     "level": "Szint",
-    "cvs_remaining": "Önéletrajz",
-    "time": "Idő"
+    "cvs_remaining": "Önéletrajz"
   },
   "level_end": {
     "title": "Szint vége!",

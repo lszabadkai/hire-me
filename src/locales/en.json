@@ -2,7 +2,7 @@
   "app": {
     "title": "Hire Me!",
     "subtitle": "You are GoTo's new Engineering Hiring Manager!",
-    "tagline": "Review CVs, spot red flags, check requirements, and make the right calls — before time runs out!"
+    "tagline": "Review CVs, spot red flags, check requirements, and make the right calls!"
   },
   "start": {
     "button": "Start Game",
@@ -12,7 +12,7 @@
       "Read the job description on the left.",
       "Review the incoming CV.",
       "Decide: HIRE ✅ or REJECT ❌",
-      "The more accurate and faster you are, the more points you earn!",
+      "After each decision, you'll see whether you got it right — and why.",
       "Look for red flags — click suspicious fields for bonus points."
     ]
   },
@@ -44,8 +44,24 @@
     "correct": "Correct decision! 🎉",
     "wrong": "Wrong decision! 😬",
     "red_flag_found": "Red flag spotted! +5 pts 🚩",
-    "speed_bonus": "Quick decision! +3 pts ⚡",
     "tap_to_continue": "Click to continue"
+  },
+  "feedback": {
+    "correct_title": "Correct! 🎉",
+    "wrong_title": "Wrong! 😬",
+    "you_chose": "You chose",
+    "correct_was": "Correct answer",
+    "points_awarded": "Points",
+    "continue": "Continue",
+    "evaluation": "Evaluation",
+    "reason": {
+      "disqualifier": "Disqualifying red flag: {{flag}}",
+      "missing_skill": "Missing required skill(s): {{skills}}",
+      "insufficient_experience": "Insufficient experience: {{actual}} yrs < {{required}} yrs required",
+      "missing_language": "Missing language(s): {{languages}}",
+      "team_size_too_small": "Team experience too small: {{actual}} < {{required}} required",
+      "qualified": "Candidate meets all requirements"
+    }
   },
   "interview": {
     "title": "Quick Interview Question",
@@ -64,8 +80,7 @@
   "hud": {
     "score": "Score",
     "level": "Level",
-    "cvs_remaining": "CVs",
-    "time": "Time"
+    "cvs_remaining": "CVs"
   },
   "level_end": {
     "title": "Level Complete!",
